@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="row mt-5 pt-5">
+      <div class="col-md-12" id="typed-strings">
+        <div class="element"></div>
+        <p style=" text-align: justify;" class="bday-text">
+          Heyy Rodela!! <br>
+          Happy Birthday to a special person who is bringing so much joy to my heart. I am thankful for every moment we
+          spend
+          together, and I wish our happiness never ends.
+
+
+        </p>
+
+      </div>
+
+
+    </div>
+    <span id="typed"></span>
+  </div>
+  <div class="flipclock" id="flipclock-1"></div>
+  <div style="height: 400px"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script src="index.js"></script>
+
+  <script>
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      typeSpeed: 30,
+
+
+      fadeOutClass: 'typed-fade-out',
+      fadeOutDelay: 500,
+    });
+
+    
+  </script>
+</body>
+
+</html>
