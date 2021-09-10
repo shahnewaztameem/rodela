@@ -1,24 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 html {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lato', sans-serif !important;
+  font-family: 'Architects Daughter', cursive !important;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: #1e1e1e; /* fallback for old browsers */
-
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,.6)),url('./rodela.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
   overflow-x: hidden;
 }
 
 #typed,
 .typed-cursor {
-  font-size: 30px;
-  line-height: 60px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
   color: #fff;
   text-shadow: 0 0 5px #3dbbff, 0 0 10px #3dbbff, 0 0 20px #3dbbff,
     0 0 30px #3dbbff, 0 0 40px #3dbbff;
@@ -29,6 +33,31 @@ body {
   display: block;
   margin: auto;
   text-align: center;
+}
+
+.flipclock {
+  
+  
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  /* overflow: hidden; */
+
+}
+.flipclock::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(10px);
+  
 }
 .flipclock {
   display: flex;
@@ -216,3 +245,49 @@ body {
   transition-delay: 0.15s;
   height: 100%;
 }
+
+
+
+#blinkText {
+  font-size: 30px;
+}
+
+#blink {
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+   font-family: lobster , cursive;
+  text-align: center;
+}
+
+@-webkit-keyframes blinker {
+    0% { color: red; 
+          text-shadow: red 0px 0px 20px;
+          font-size: 500%}
+    50% { color: blue;
+           text-shadow: blue 0px 0px 20px;
+            font-size: 500%;}
+    
+    100% { color: red;
+           text-shadow: red 0px 0px 20px;
+            font-size: 500%;}
+}
+
+h1 {
+   -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: woosher;
+     color: white;
+}
+
+@-webkit-keyframes  woosher {
+  0% {
+    margin-left: 100%;
+    width: 300%;
+  }
+  100% {
+    margin-left: 50%;
+    width: 100%;
+  }
+}
+
